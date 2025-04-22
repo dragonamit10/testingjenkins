@@ -18,7 +18,7 @@ pipeline {
                 echo 'Building Java project...'
 		echo "Current Branch: ${env.GIT_BRANCH}"
                 dir('java_project') { 
-		    echo ${PATH}
+		    echo "${PATH}"
                     sh 'mvn clean install'  
                 }
             }
