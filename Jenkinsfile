@@ -36,7 +36,7 @@ pipeline {
 
         stage('Deploy') {
             when {
-                branch 'main'
+                branch 'origin/main'
             }
             steps {
                 echo 'Deploying application...'
