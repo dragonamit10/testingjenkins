@@ -43,6 +43,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying application...'
+		sh 'chmod 754 deploy.sh'
                 sh './deploy.sh' 
             }
         }
