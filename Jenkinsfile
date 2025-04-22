@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         JAVA_HOME = '/usr/lib/jvm/java-21-openjdk'  // Adjust to your installed version
-        PATH = "${JAVA_HOME}/bin:${env.PATH}"
+        PATH = "${JAVA_HOME}/bin:${env.PATH}:/var/lib/jenkins/.local/bin"
     }
 
     stages {
