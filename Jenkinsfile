@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = '/usr/lib/jvm/java-11-openjdk'  // Adjust to your installed version
+        JAVA_HOME = '/usr/lib/jvm/java-21-openjdk'  // Adjust to your installed version
         PATH = "${JAVA_HOME}/bin:${env.PATH}"
     }
 
