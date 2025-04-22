@@ -36,7 +36,10 @@ pipeline {
 
         stage('Deploy') {
             when {
-                branch 'main'
+	        expression {
+		    echo "Checking branch: ${env.GIT_BRANCH}"
+		    return env.GIT_BRANCH == 'origin/main' 
+                }
             }
             steps {
                 echo 'Deploying application...'
