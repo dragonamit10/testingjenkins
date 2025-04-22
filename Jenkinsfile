@@ -17,7 +17,8 @@ pipeline {
             steps {
                 echo 'Building Java project...'
                 dir('java_project') { 
-                    sh './mvn clean install'  
+		    sh "echo $PATH"
+                    sh 'mvn clean install'  
                 }
             }
         }
