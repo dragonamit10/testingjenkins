@@ -16,7 +16,7 @@ pipeline {
         stage('Build Java Project') {
             steps {
                 echo 'Building Java project...'
-		echo "Current Branch: ${env.GIT_BRANCH}"
+		echo "Current Branch: ${env.GIT_BRANCH} ${env.BRANCH_NAME}"
                 dir('java_project') { 
 		    echo "${PATH}"
                     sh 'mvn clean install'  
